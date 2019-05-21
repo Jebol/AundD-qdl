@@ -2,15 +2,15 @@ import qdl.list.IList;
 
 public class List<T> implements IList<T> {
 
-	public Link start;
-	public Link end;
+	public Link<T> start;
+	public Link<T> end;
 
 	@Override
 	public int size() {
 		int count = 0;
-		Link i = start;
+		Link<T> i = start;
 		while (i != null) {
-			
+
 			i = i.next;
 			count++;
 
@@ -21,19 +21,29 @@ public class List<T> implements IList<T> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
+		Link<T> i = start;
+		if(i== null) {
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public void add(T data) {
-		// TODO Auto-generated method stub
+		if(start == null) {
+			start = end= new Link<T>();
+			start.data = data;
+		}else {
+			end.next = new Link<T>();
+			end.next.data = data;
+			end = end.next;
+		}
 
 	}
 
 	@Override
 	public void addFront(T data) {
-		// TODO Auto-generated method stub
+		
 
 	}
 

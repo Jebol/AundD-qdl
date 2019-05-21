@@ -1,12 +1,11 @@
 import qdl.list.AbstractListTest;
 import qdl.list.IList;
 
-public class ListTest extends AbstractListTest {
+public class ListTest<T extends AbstractListTest> {
 
-	@Override
-	public IList get() {
+	public IList<T> get() {
 		// TODO Auto-generated method stub
-		return new List();
+		return new List<T>();
 	}
 
 }
