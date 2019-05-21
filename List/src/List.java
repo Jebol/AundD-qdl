@@ -1,11 +1,22 @@
 import qdl.list.IList;
 
-public class List implements IList<T> {
+public class List<T> implements IList<T> {
+
+	public Link start;
+	public Link end;
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		int count = 0;
+		Link i = start;
+		while (i != null) {
+			
+			i = i.next;
+			count++;
+
+		}
+
+		return count;
 	}
 
 	@Override
@@ -17,37 +28,37 @@ public class List implements IList<T> {
 	@Override
 	public void add(T data) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void addFront(T data) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void addAll(IList<T> list) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void insert(int index, T data) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void remove(int index) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void remove(T data) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -71,7 +82,7 @@ public class List implements IList<T> {
 	@Override
 	public void reverse() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

@@ -4,9 +4,9 @@ import qdl.list.IList;
 public class ListTest extends AbstractListTest {
 
 	@Override
-	public <T> IList<T> get() {
+	public IList get() {
 		// TODO Auto-generated method stub
-		return new List<T>();
+		return new List();
 	}
 
 }
